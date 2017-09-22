@@ -12,7 +12,7 @@
         </thead>
       </table>
     </div>
-    <div class="table-body" :style="{ width: tableWidth + 'px' }">
+    <div class="table-body" :style="{ width: tableWidth + 'px', height: height + 'px' }">
       <table>
         <colgroup>
           <col v-for="(col, index) in columns" :style="getColWidthStyle(col, index)"/>
@@ -45,6 +45,11 @@ export default {
     rows: {
       type: Array,
       required: true
+    },
+    height: {
+      type: Number,
+      default: 300,
+      required: false
     }
   },
   data () {
@@ -200,7 +205,6 @@ export default {
   }
 
   .table-body {
-    /* height: 300px; */
     overflow-y: auto;
     overflow-x: hidden;
   }

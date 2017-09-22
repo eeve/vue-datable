@@ -5,7 +5,7 @@
     
     <div class="split-line"></div>
     <h1>Demo</h1>
-    <DataTable class="demo-datable" :columns="columns" :rows="rows" />
+    <DataTable :columns="columns" :rows="rows" :height="350" />
 
     <div class="split-line"></div>
 
@@ -58,6 +58,13 @@
             <td>Structured data displayed</td>
             <td>String</td>
             <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>table body max height, overflow hidden</td>
+            <td>Number</td>
+            <td>300</td>
             <td></td>
           </tr>
         </tbody>
@@ -165,9 +172,6 @@
   .split-line {
     border-bottom: 1px solid #eee;
     margin: 3rem 0;
-  }
-  .demo-datable .table-body {
-    height: 300px;
   }
   .responsive {
     width: 100%;

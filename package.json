@@ -1,6 +1,6 @@
 {
   "name": "vue-datable",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "DataTable components for Vue.",
   "main": "dist/index.min.js",
   "author": "eeve",
