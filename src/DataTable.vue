@@ -80,6 +80,11 @@ export default {
   mounted () {
     this.wrapperWidth = this.$refs.wrapper.offsetWidth
   },
+  watch: {
+		columns() {
+			this.initWidth()
+		}
+	},
   methods: {
     async initWidth () {
       // 如果所有的列都没有指定宽度的话，就不设置具体宽度
