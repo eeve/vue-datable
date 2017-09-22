@@ -1912,6 +1912,11 @@ module.exports = function listToStyles (parentId, list) {
     this.wrapperWidth = this.$refs.wrapper.offsetWidth;
   },
 
+  watch: {
+    columns: function columns() {
+      this.initWidth();
+    }
+  },
   methods: {
     initWidth: function () {
       var _ref = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_asyncToGenerator___default()( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
