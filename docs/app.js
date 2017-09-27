@@ -1769,7 +1769,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "\n.clearfix[data-v-024c8f2e] {\n  overflow: auto;\n  _height: 1%;\n}\n.datatable-wrapper[data-v-024c8f2e] {\n  width: 100%;\n  border: 1px solid #eee;\n  overflow-x: auto;\n  position: relative;\n}\n.datatable-wrapper *[data-v-024c8f2e] {\n  box-sizing: border-box;\n}\n.datatable-wrapper .loading[data-v-024c8f2e] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: -2px;\n  background: rgba(255, 255, 255, 0.8);\n}\n.datatable-wrapper .loading .loader[data-v-024c8f2e] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-top: -11px;\n  margin-left: -7px;\n}\n.datatable-wrapper .loading .loader rect[data-v-024c8f2e] {\n  fill: #111;\n}\n.table-head > table[data-v-024c8f2e],\n.table-body > table[data-v-024c8f2e] {\n  width: 100%;\n  border-collapse: collapse;\n}\n.table-head[data-v-024c8f2e] {\n  color: #111;\n}\n.table-body[data-v-024c8f2e] {\n  /* height: 300px; */\n  overflow-y: auto;\n  overflow-x: hidden;\n}\ntable tbody[data-v-024c8f2e] {\n  display: block;\n  overflow-y: scroll;\n}\ntable thead th[data-v-024c8f2e] {\n  background: #888;\n}\ntable thead[data-v-024c8f2e],\ntbody tr[data-v-024c8f2e] {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n}\ntbody td[data-v-024c8f2e], thead th[data-v-024c8f2e] {\n  border-bottom: 1px solid #eee;\n  border-right: 1px solid #eee;\n  text-align: left;\n\n  white-space: nowrap;\n  /* float: left; */\n  padding: 0.1rem 0.5rem;\n}\ntbody tr:last-child td[data-v-024c8f2e] {\n  border-bottom: none;\n}\ntbody tr td[data-v-024c8f2e]:last-child {\n  border-right: none;\n}\n", ""]);
+exports.push([module.i, "\n.clearfix[data-v-024c8f2e] {\n  overflow: auto;\n  _height: 1%;\n}\n.datatable-wrapper[data-v-024c8f2e] {\n  width: 100%;\n  border: 1px solid #eee;\n  overflow-x: auto;\n  position: relative;\n}\n.datatable-wrapper *[data-v-024c8f2e] {\n  box-sizing: border-box;\n}\n.datatable-wrapper .loading[data-v-024c8f2e] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: -2px;\n  background: rgba(255, 255, 255, 0.8);\n}\n.datatable-wrapper .loading .loader[data-v-024c8f2e] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-top: -11px;\n  margin-left: -7px;\n}\n.datatable-wrapper .loading .loader rect[data-v-024c8f2e] {\n  fill: #111;\n}\n.table-head > table[data-v-024c8f2e],\n.table-body > table[data-v-024c8f2e] {\n  width: 100%;\n  border-collapse: collapse;\n}\n.table-head[data-v-024c8f2e] {\n  color: #111;\n}\n.table-body[data-v-024c8f2e] {\n  overflow-y: auto;\n  overflow-x: hidden;\n}\ntable tbody[data-v-024c8f2e] {\n  display: block;\n  overflow-y: scroll;\n}\ntable thead th[data-v-024c8f2e] {\n  background: #888;\n}\ntable thead[data-v-024c8f2e],\ntbody tr[data-v-024c8f2e] {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n}\ntbody td[data-v-024c8f2e], thead th[data-v-024c8f2e] {\n  border-bottom: 1px solid #eee;\n  border-right: 1px solid #eee;\n  text-align: left;\n\n  white-space: nowrap;\n  /* float: left; */\n  padding: 0.1rem 0.5rem;\n}\ntbody tr:last-child td[data-v-024c8f2e] {\n  border-bottom: none;\n}\ntbody tr td[data-v-024c8f2e]:last-child {\n  border-right: none;\n}\n", ""]);
 
 // exports
 
@@ -1869,6 +1869,11 @@ module.exports = function listToStyles (parentId, list) {
     rows: {
       type: Array,
       required: true
+    },
+    height: {
+      type: Number,
+      default: 300,
+      required: false
     }
   },
   data: function data() {
@@ -4016,7 +4021,8 @@ var render = function render() {
   }))])])]), _vm._v(" "), _c('div', {
     staticClass: "table-body",
     style: {
-      width: _vm.tableWidth + 'px'
+      width: _vm.tableWidth + 'px',
+      height: _vm.height + 'px'
     }
   }, [_c('table', [_c('colgroup', _vm._l(_vm.columns, function (col, index) {
     return _c('col', {
@@ -4090,7 +4096,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "\nbody {\n  font: 14px/1.6 Source Sans Pro,Calibri,Candara,Arial,sans-serif;\n}\n.sub-title {\n  font-size: 1.1rem;\n}\n.split-line {\n  border-bottom: 1px solid #eee;\n  margin: 3rem 0;\n}\n.demo-datable .table-body {\n  height: 300px;\n}\n.responsive {\n  width: 100%;\n  overflow-x: auto;\n}\n.example .responsive table {\n  border-collapse:collapse;\n}\n.example .responsive table tr th {\n  background: #f5f5f5;\n}\n.example .responsive table tr td, .example .responsive table tr th{\n  border: 1px solid #eee;\n  padding: 0.25rem 1rem;\n}\n", ""]);
+exports.push([module.i, "\nbody {\n  font: 14px/1.6 Source Sans Pro,Calibri,Candara,Arial,sans-serif;\n}\n.sub-title {\n  font-size: 1.1rem;\n}\n.split-line {\n  border-bottom: 1px solid #eee;\n  margin: 3rem 0;\n}\n.responsive {\n  width: 100%;\n  overflow-x: auto;\n}\n.example .responsive table {\n  border-collapse:collapse;\n}\n.example .responsive table tr th {\n  background: #f5f5f5;\n}\n.example .responsive table tr td, .example .responsive table tr th{\n  border: 1px solid #eee;\n  padding: 0.25rem 1rem;\n}\n", ""]);
 
 // exports
 
@@ -4102,6 +4108,13 @@ exports.push([module.i, "\nbody {\n  font: 14px/1.6 Source Sans Pro,Calibri,Cand
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Code__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__code_install__ = __webpack_require__(118);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -21233,10 +21246,10 @@ var render = function render() {
   }, [_vm._v("DataTable is used to display a mass of structured data.")]), _vm._v(" "), _c('div', {
     staticClass: "split-line"
   }), _vm._v(" "), _c('h1', [_vm._v("Demo")]), _vm._v(" "), _c('DataTable', {
-    staticClass: "demo-datable",
     attrs: {
       "columns": _vm.columns,
-      "rows": _vm.rows
+      "rows": _vm.rows,
+      "height": 350
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "split-line"
@@ -21284,7 +21297,7 @@ var staticRenderFns = [function () {
   var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;
   return _c('div', {
     staticClass: "responsive"
-  }, [_c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("Property")]), _vm._v(" "), _c('th', [_vm._v("Description")]), _vm._v(" "), _c('th', [_vm._v("Type")]), _vm._v(" "), _c('th', [_vm._v("Default")]), _vm._v(" "), _c('th', [_vm._v("Optional")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("columns")]), _vm._v(" "), _c('td', [_vm._v("Column configuration. Details are mentioned below.")]), _vm._v(" "), _c('td', [_vm._v("Array")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td')]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rows")]), _vm._v(" "), _c('td', [_vm._v("Structured data displayed")]), _vm._v(" "), _c('td', [_vm._v("String")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td')])])])]);
+  }, [_c('table', [_c('thead', [_c('tr', [_c('th', [_vm._v("Property")]), _vm._v(" "), _c('th', [_vm._v("Description")]), _vm._v(" "), _c('th', [_vm._v("Type")]), _vm._v(" "), _c('th', [_vm._v("Default")]), _vm._v(" "), _c('th', [_vm._v("Optional")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("columns")]), _vm._v(" "), _c('td', [_vm._v("Column configuration. Details are mentioned below.")]), _vm._v(" "), _c('td', [_vm._v("Array")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td')]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("rows")]), _vm._v(" "), _c('td', [_vm._v("Structured data displayed")]), _vm._v(" "), _c('td', [_vm._v("String")]), _vm._v(" "), _c('td'), _vm._v(" "), _c('td')]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("height")]), _vm._v(" "), _c('td', [_vm._v("table body max height, overflow hidden")]), _vm._v(" "), _c('td', [_vm._v("Number")]), _vm._v(" "), _c('td', [_vm._v("300")]), _vm._v(" "), _c('td')])])])]);
 }, function () {
   var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;
   return _c('div', {

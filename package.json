@@ -17,6 +17,11 @@
     "parser": "babel-eslint"
   },
   "keywords": [
+    "vue-datable",
+    "datatable",
+    "datagrid",
+    "table",
+    "vue"
   ],
   "devDependencies": {
     "babel-cli": "^6.26.0",
