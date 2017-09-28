@@ -1946,9 +1946,11 @@ module.exports = function listToStyles (parentId, list) {
                       if (typeof userWidth !== 'undefined' && parseFloat(userWidth) > 0) {
                         widths[index] = userWidth;
                       } else if (typeof val !== 'undefined') {
-                        var realW = _this.defaultWidth(val).width;
-                        if (w < realW) {
-                          widths[index] = realW;
+                        var titleRealW = _this.defaultWidth(col.title).width;
+                        var valRealW = _this.defaultWidth(val).width;
+                        if (w < titleRealW || w < valRealW) {
+                          // 如果标题比内容大，则最终使用标题的宽度
+                          widths[index] = titleRealW > valRealW ? titleRealW : valRealW;
                         }
                       }
                     });
