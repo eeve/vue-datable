@@ -1920,6 +1920,9 @@ module.exports = function listToStyles (parentId, list) {
   watch: {
     columns: function columns() {
       this.initWidth();
+    },
+    rows: function rows() {
+      this.initWidth();
     }
   },
   methods: {
@@ -4239,8 +4242,8 @@ exports.push([module.i, "\nbody {\n  font: 14px/1.6 Source Sans Pro,Calibri,Cand
         width: 100
       }, {
         key: 'content',
-        title: '内容',
-        width: 299
+        title: '内容'
+        // width: 299
       }, {
         key: 'content2',
         title: '内容2'
@@ -4268,6 +4271,19 @@ exports.push([module.i, "\nbody {\n  font: 14px/1.6 Source Sans Pro,Calibri,Cand
         return arr;
       }()
     };
+  },
+  beforeMount: function beforeMount() {
+    var _this = this;
+
+    setInterval(function () {
+      _this.rows.push({
+        id: _this.rows.length,
+        content: Math.random() + 'aasdsadasdasdasdasd', // `我是${i+1}号内容`,
+        content2: Math.random() + 'aasdsadasdasdasdasd', // `我是${i+1}号内容2`,
+        content3: Math.random() + 'aasdsadasdasdasdasd', // `我是${i+1}号内容3`,
+        content4: Math.random() + 'aasdsadasdasdasdasd'
+      });
+    }, 3000);
   }
 });
 

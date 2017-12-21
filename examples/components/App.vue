@@ -129,7 +129,7 @@
           },{
             key: 'content',
             title: '内容',
-            width: 299
+            // width: 299
           },{
             key: 'content2',
             title: '内容2',
@@ -158,6 +158,17 @@
           return arr
         })(),
       }
+    },
+    beforeMount() {
+      setInterval(() => {
+        this.rows.push({
+          id: this.rows.length,
+          content: Math.random() + 'aasdsadasdasdasdasd', // `我是${i+1}号内容`,
+          content2: Math.random() + 'aasdsadasdasdasdasd', // `我是${i+1}号内容2`,
+          content3: Math.random() + 'aasdsadasdasdasdasd', // `我是${i+1}号内容3`,
+          content4: Math.random() + 'aasdsadasdasdasdasd',
+        })
+      }, 3000)
     }
   }
 </script>

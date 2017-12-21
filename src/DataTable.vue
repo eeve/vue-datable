@@ -88,6 +88,9 @@ export default {
   watch: {
     columns () {
       this.initWidth()
+    },
+    rows () {
+      this.initWidth()
     }
   },
   methods: {
